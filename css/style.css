@@ -1,0 +1,382 @@
+/* ==========================================================================
+   ЗАГАЛЬНІ СТИЛІ ТА СКИДАННЯ НАЛАШТУВАНЬ
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* ==========================================================================
+   ШАПКА САЙТУ (HEADER)
+   ========================================================================== */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #cccccc;
+}
+
+/* ==========================================================================
+   ГОЛОВНИЙ ЕКРАН (HERO SECTION)
+   ========================================================================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.hero p {
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   СЕКЦІЯ ПРО МЕНЕ (ABOUT ME)
+   ========================================================================== */
+.about {
+    padding: 120px 10%;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-text .subtitle {
+    font-size: 19px;
+    color: #555555;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.about-text .description {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #333333;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   СЕКЦІЯ ЦІН (PRICING SECTION)
+   ========================================================================== */
+.price {
+    padding: 100px 10%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    color: #111111;
+}
+
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 40px 30px;
+    width: 320px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.price-card.popular {
+    border: 2px solid #111111;
+    transform: scale(1.03);
+}
+
+.price-card.popular:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111111;
+    color: #ffffff;
+    padding: 5px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.price-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cost {
+    font-size: 48px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+.price-time {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.price-features {
+    list-style: none;
+    margin-bottom: 40px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.price-features li {
+    font-size: 15px;
+    color: #444444;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.price-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #111111;
+    font-weight: bold;
+}
+
+.price-btn {
+    display: block;
+    background-color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.price-btn:hover {
+    background-color: #333333;
+}
+
+.price-card.popular .price-btn {
+    background-color: #000000;
+}
+
+/* ==========================================================================
+   СЕКЦІЯ ПОРТФОЛІО (PORTFOLIO SECTION)
+   ========================================================================== */
+.portfolio {
+    padding: 100px 10%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.portfolio-subtitle {
+    font-size: 16px;
+    color: #666666;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 3 / 2;
+    background-color: #f0f0f0;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-overlay span {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.08);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-overlay span {
+    transform: translateY(0);
+}
+
+/* Адаптивність для мобільних екранів */
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   ПІДВАЛ САЙТУ (FOOTER)
+   ========================================================================== */
+.footer {
+    padding: 40px 10%;
+    background-color: #111111;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.socials a:hover {
+    color: #cccccc;
+}
