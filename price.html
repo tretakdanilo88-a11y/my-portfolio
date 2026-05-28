@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифні Плани | Qoder Style</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #060709;
+            color: #f0f3f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 40px 20px;
+        }
+
+        .price-container {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: #00e676;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #8a94a6;
+            margin-bottom: 40px;
+        }
+
+        .price-table-wrapper {
+            background-color: #0d0e12;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        td {
+            padding: 22px 24px;
+            font-size: 14.5px;
+            color: #cbd5e1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-col {
+            color: #00e676;
+            font-weight: 700;
+        }
+
+        .buy-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 230, 118, 0.06);
+            color: #00e676;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 230, 118, 0.2);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #00e676;
+            color: #060709;
+            border-color: #00e676;
+        }
+
+        .back-home {
+            margin-top: 40px;
+            display: inline-block;
+            color: #8a94a6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-home:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="price-container">
+        <h1>Тарифні <span>Плани</span></h1>
+        <p class="subtitle">Прозора вартість та терміни розробки цифрових продуктів</p>
+
+        <div class="price-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Тип послуги</th>
+                        <th>Термін виконання</th>
+                        <th>Вартість</th>
+                        <th style="text-align: right;">Дія</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Сайт-Візитка / Landing Page</td>
+                        <td>2-4 дні</td>
+                        <td class="price-col">від 150$</td>
+                        <td style="text-align: right;">
+                            <span class="buy-btn" onclick="alert('Дякуємо! Замовлення на Landing Page прийнято в обробку.')">Обрати тариф</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Персональне Портфоліо розробника</td>
+                        <td>3-5 днів</td>
+                        <td class="price-col">від 200$</td>
+                        <td style="text-align: right;">
+                            <span class="buy-btn" onclick="alert('Дякуємо! Замовлення на Портфоліо прийнято в обробку.')">Обрати тариф</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Інформаційний бізнес-сайт</td>
+                        <td>5-7 днів</td>
+                        <td class="price-col">від 350$</td>
+                        <td style="text-align: right;">
+                            <span class="buy-btn" onclick="alert('Дякуємо! Замовлення на Бізнес-сайт прийнято в обробку.')">Обрати тариф</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="index.html" class="back-home">← На головну сторінку</a>
+    </div>
+
+</body>
+</html>
