@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея робіт | Qoder Style</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #060709;
+            color: #f0f3f6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: rgba(6, 7, 9, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            box-sizing: border-box;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #00e676;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #8a94a6;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        nav ul li.active a {
+            color: #00e676;
+            font-weight: 600;
+        }
+
+        .portfolio-page {
+            max-width: 1200px;
+            margin: 140px auto 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        h1 span {
+            color: #00e676;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #8a94a6;
+            margin-bottom: 60px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .portfolio-card {
+            background-color: #0d0e12;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 28px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 22px;
+            margin: 0 0 12px 0;
+            color: #ffffff;
+        }
+
+        .card-content p {
+            color: #8a94a6;
+            font-size: 14.5px;
+            margin: 0 0 25px 0;
+            height: 70px;
+            overflow: hidden;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 25px;
+            margin-top: auto;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            background-color: rgba(255, 255, 255, 0.03);
+            color: #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .card-btn:hover {
+            color: #00e676;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><span>/</span>AgenticDev</div>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li class="active"><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="price.html">Price ↗</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="portfolio-page">
+        <h1>Проєкти та <span>Розробки</span></h1>
+        <p class="subtitle">Інтерфейси та веб-застосунки, реалізовані з дотриманням сучасних стандартів архітектури</p>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" class="card-image" alt="Проєкт 1">
+                <div class="card-content">
+                    <h3>Сайт-Портфоліо</h3>
+                    <p>Персональний веб-сайт розробника, адаптований під темний кібер-стиль системи Qoder. Реалізовано гнучку структуру та плавні переходи.</p>
+                    <div class="card-tags"><span class="card-tag">HTML5</span><span class="card-tag">CSS3</span></div>
+                    <a href="https://www.figma.com/design/AAXiyOCJFY6FShvQzf3ZAC/Agentic-IDE-Landing-Page---Website-Designs---Free-Website-Templates---Web-Design-Inspiration--Community-?node-id=0-1&t=MUcDiQ0qPAswMKYS-1" target="_blank" class="card-btn">Дивитися у Figma ↗</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80" class="card-image" alt="Проєкт 2">
+                <div class="card-content">
+                    <h3>Адаптивний Лендінг</h3>
+                    <p>Односторінковий сайт із сіткою комерційних послуг. Повна оптимізація відображення на мобільних девайсах, смартфонах та моніторах.</p>
+                    <div class="card-tags"><span class="card-tag">Flexbox</span><span class="card-tag">Media Queries</span></div>
+                    <a href="https://www.figma.com/design/AAXiyOCJFY6FShvQzf3ZAC/Agentic-IDE-Landing-Page---Website-Designs---Free-Website-Templates---Web-Design-Inspiration--Community-?node-id=8-9885&t=MUcDiQ0qPAswMKYS-1" target="_blank" class="card-btn">Дивитися код →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&auto=format&fit=crop&q=80" class="card-image" alt="Проєкт 3">
+                <div class="card-content">
+                    <h3>Таблиця ціноутворення</h3>
+                    <p>Інформаційний прайс-лист послуг. Побудований на базі HTML-таблиць з інтегрованими кнопками зворотного переходу на головну.</p>
+                    <div class="card-tags"><span class="card-tag">HTML Tables</span><span class="card-tag">UI Design</span></div>
+                    <a href="price.html" class="card-btn">Відкрити сторінку →</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← Повернутися на головну</a>
+    </div>
+
+</body>
+</html>
